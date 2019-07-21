@@ -1,24 +1,61 @@
-# README
+# IAM-FREEZING
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Installation
 
-Things you may want to cover:
+### Prerequisite
 
-* Ruby version
+** Ruby 2.5.3 **
 
-* System dependencies
+** Rails 5 **
 
-* Configuration
+** Git **
 
-* Database creation
 
-* Database initialization
+### Clone
+- Clone this repo to your local machine  
+```
+git clone git@github.com:harikumar8984/iam-freezing.git
+```
 
-* How to run the test suite
+### Development Setup
 
-* Services (job queues, cache servers, search engines, etc.)
+#### Gems
+```
+bundle install
+```
+#### Database
+```
+rake db:create
+rake db:seed
+```
+#### TestCase
 
-* Deployment instructions
+```
+rspec
+```
 
-* ...
+#### Services
+##### Redis
+##### Sidekiq
+```
+redis-server
+redis-server --port 6380
+bundle exec sidekiq
+
+```
+
+### Start Server
+```
+rails s
+```
+#### API endpoints
+
+```
+POST http://#{request.host}/api/thermostats/:thermostat_id/readings                                   
+GET  http://#{request.host}/api/thermostats/:thermostat_id/readings/:tracking_number
+GET  http://#{request.host}/api/thermostats/:id
+
+```
+
+- Server will up & run in the port *localhost:3000*
+- Request header should contain authentication token #auth_token

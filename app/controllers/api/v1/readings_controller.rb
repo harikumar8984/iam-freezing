@@ -28,7 +28,10 @@ class Api::V1::ReadingsController < ApplicationController
     end
   end
 
+  private
+
   def readings_params
     params.permit(:temperature, :humidity, :battery_charge, :thermostat_id).merge(tracking_number: tracking_number)
   end
+  
 end

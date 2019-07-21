@@ -13,6 +13,8 @@ class ApplicationController < ActionController::API
     raise ExceptionHandler::AuthenticationError, I18n.t(:not_athenticated)
   end
 
+  private
+  
   def set_locale
     I18n.locale = params[:locale] || I18n.default_locale
   end
