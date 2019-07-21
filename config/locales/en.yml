@@ -30,4 +30,9 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  # not authenticated
+  not_athenticated: "Authentication Failed"
+  # authentication token missing
+  token_missing: "Authentication token is missing"
+  # required field missing
+  field_missing: "Required fields are missing"

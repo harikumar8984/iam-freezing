@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -10,23 +12,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_21_042018) do
-
-  create_table "readings", force: :cascade do |t|
-    t.integer "thermostat_id"
-    t.integer "tracking_number"
-    t.float "temperature"
-    t.float "humidity"
-    t.float "battery_charge"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+ActiveRecord::Schema.define(version: 20_190_721_042_018) do
+  create_table 'readings', force: :cascade do |t|
+    t.integer 'thermostat_id'
+    t.integer 'tracking_number'
+    t.float 'temperature'
+    t.float 'humidity'
+    t.float 'battery_charge'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
   end
 
-  create_table "thermostats", force: :cascade do |t|
-    t.string "household_token"
-    t.string "location"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+  create_table 'thermostats', force: :cascade do |t|
+    t.string 'household_token'
+    t.string 'location'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
   end
-
 end
