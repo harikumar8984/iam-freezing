@@ -13,7 +13,7 @@ gem 'sqlite3'
 # Use Puma as the app server
 gem 'active_model_serializers'
 gem 'bootsnap', '>= 1.1.0', require: false
-gem 'puma', '~> 3.11'
+gem 'puma', '~> 4.3'
 gem 'redis'
 gem 'redis-namespace'
 gem 'sidekiq'
